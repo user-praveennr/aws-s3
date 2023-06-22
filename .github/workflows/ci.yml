@@ -5,7 +5,7 @@ on:
 
 env:
   BUCKET_NAME : "ejdev-s3"
-  AWS_REGION : ""
+  AWS_REGION : "eu-west-1"
   GITHUB_REF: "main"
 
 
@@ -22,7 +22,7 @@ jobs:
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::464615698121:role/gitHub-actions-role
+          role-to-assume: arn:aws:iam::481745247371:role/github-action-ej-role
           role-session-name: GitHub-Action-Role
           aws-region: ${{ env.AWS_REGION }}
 
