@@ -68,7 +68,7 @@ jobs:
     - name: Configure AWS credentials from Test account
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: arn:aws:iam::464615698121:role/gitHub-actions-role
+        role-to-assume: arn:aws:iam::481745247371:role/github-action-ej-role
         aws-region: ${{ env.AWS_REGION }}
     - run: |
         aws deploy create-deployment --application-name node-express-app --deployment-group-name node-deployment --s3-location bucket=typescript-express-artifact,key=main/latest/project.zip,bundleType=zip
